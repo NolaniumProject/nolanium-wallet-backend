@@ -6,7 +6,7 @@
   "types": "dist/lib/index.d.ts",
   "scripts": {
     "prepublish": "npm run-script build",
-    "build": "./node_modules/.bin/tsc",
+    "build": "tsc",
     "test": "npm run-script build && node dist/tests/tests.js",
     "test-all": "npm run-script build && node dist/tests/tests.js --do-performance-tests",
     "style": "./node_modules/.bin/tslint -c tslint.json 'lib/**/*.ts'",
