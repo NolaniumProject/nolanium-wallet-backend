@@ -221,7 +221,7 @@ export class Config implements IConfig {
     /**
      * The block time of your coin, in seconds
      */
-    public blockTargetTime: number = 10;
+    public blockTargetTime: number = 30;
 
     /**
      * How often to process blocks, in millseconds
