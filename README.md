@@ -3,6 +3,9 @@
 #### Master Build Status
 [![Build Status](https://travis-ci.org/NolaniumProject/nolanium-wallet-backend.svg?branch=master)](https://travis-ci.org/NolaniumProject/nolanium-wallet-backend)
 
+#### NPM
+[![NPM](https://nodei.co/npm/nolanium-wallet-backend.png?compact=true)](https://npmjs.org/package/nolanium-wallet-backend)
+
 #### Github
 
 https://github.com/NolaniumProject/nolanium-wallet-backend

@@ -6,7 +6,7 @@
   "types": "dist/lib/index.d.ts",
   "scripts": {
     "prepublish": "npm run-script build",
-    "build": "tsc",
+    "build": "./node_modules/.bin/tsc",
     "test": "npm run-script build && node dist/tests/tests.js",
     "test-all": "npm run-script build && node dist/tests/tests.js --do-performance-tests",
     "style": "./node_modules/.bin/tslint -c tslint.json 'lib/**/*.ts'",
@@ -25,7 +25,7 @@
     "pbkdf2": "^3.0.17",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8",
-    "turtlecoin-utils": "git+https://github.com/NolaniumProject/nolanium-utils.git",
+    "turtlecoin-utils": "1.0.20",
     "typescript": "^3.7.2"
   },
   "devDependencies": {

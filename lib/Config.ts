@@ -209,7 +209,7 @@ export class Config implements IConfig {
 
     /**
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
-     * In TurtleCoin, this converts to Na1
+     * In TurtleCoin, this converts to TRTL
      */
     public addressPrefix: number = 31232;
 
@@ -259,7 +259,7 @@ export class Config implements IConfig {
     /**
      * The minimum fee allowed for transactions, in ATOMIC units
      */
-    public minimumFee: number = 1000;
+    public minimumFee: number = 10000;
 
     /* Fee per byte is rounded up in chunks. This helps makes estimates
      * more accurate. It's suggested to make this a power of two, to relate
@@ -282,14 +282,14 @@ export class Config implements IConfig {
     /**
      * The length of a standard address for your coin
      */
-    public standardAddressLength: number = 97;
+    public standardAddressLength: number = 98;
 
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
        payment ID's are 64 chars, and base58 encoding is done by encoding
        chunks of 8 chars at once into blocks of 11 chars, we can calculate
        this automatically */
-    public integratedAddressLength: number = 97 + ((64 * 11) / 8);
+    public integratedAddressLength: number = 98 + ((64 * 11) / 8);
 
     /**
      * A replacement function for the JS/C++ underivePublicKey.
