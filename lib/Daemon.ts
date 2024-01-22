@@ -209,7 +209,7 @@ export class Daemon extends EventEmitter implements IDaemon {
 
         try {
             info = await this.makeGetRequest('/info');
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to update daemon info: ' + err.toString(),
                 LogLevel.INFO,
@@ -318,7 +318,7 @@ export class Daemon extends EventEmitter implements IDaemon {
                 startHeight,
                 startTimestamp,
             });
-        } catch (err) {
+        } catch (err: any) {
             this.blockCount = Math.ceil(this.blockCount / 4);
 
             logger.log(
@@ -389,7 +389,7 @@ export class Daemon extends EventEmitter implements IDaemon {
             }
 
             return indexes;
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to get global indexes: ' + err.toString(),
                 LogLevel.ERROR,
@@ -407,7 +407,7 @@ export class Daemon extends EventEmitter implements IDaemon {
             });
 
             return data.transactionsUnknown || [];
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to get transactions status: ' + err.toString(),
                 LogLevel.ERROR,
@@ -445,7 +445,7 @@ export class Daemon extends EventEmitter implements IDaemon {
 
                 data = tmp.outs || [];
             }
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to get random outs: ' + err.toString(),
                 LogLevel.ERROR,
@@ -513,7 +513,7 @@ export class Daemon extends EventEmitter implements IDaemon {
 
         try {
             feeInfo = await this.makeGetRequest('/fee');
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to update fee info: ' + err.toString(),
                 LogLevel.INFO,
