@@ -1288,7 +1288,7 @@ async function makeTransaction(
         );
 
         return [tx, undefined];
-    } catch (err) {
+    } catch (err: any) {
         logger.log(
             `Error while creating transaction with turtlecoin-utils: ${err.toString()}`,
             LogLevel.DEBUG,
@@ -1370,7 +1370,7 @@ async function relayTransaction(
         [relaySuccess, errorMessage] = await daemon.sendTransaction(tx.rawTransaction);
 
     /* Timeout */
-    } catch (err) {
+    } catch (err: any) {
         logger.log(
             `Caught exception relaying transaction, error: ${err.toString()}, return code: ${err.statusCode}`,
             LogLevel.DEBUG,
