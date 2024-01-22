@@ -18,7 +18,7 @@ export function openWallet(filename: string, password: string): [string, WalletE
 
     try {
         data = fs.readFileSync(filename);
-    } catch (err) {
+    } catch (err: any) {
         return ['', new WalletError(WalletErrorCode.FILENAME_NON_EXISTENT, err.toString())];
     }
 
