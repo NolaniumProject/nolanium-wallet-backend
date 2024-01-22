@@ -483,7 +483,7 @@ export class WalletBackend extends EventEmitter {
 
         try {
             keys = CryptoUtils(MergeConfig(config)).createAddressFromMnemonic(mnemonicSeed);
-        } catch (err) {
+        } catch (err: any) {
             return [undefined, new WalletError(WalletErrorCode.INVALID_MNEMONIC, err.toString())];
         }
 
@@ -560,7 +560,7 @@ export class WalletBackend extends EventEmitter {
 
         try {
             keys = CryptoUtils(MergeConfig(config)).createAddressFromKeys(privateSpendKey, privateViewKey);
-        } catch (err) {
+        } catch (err: any) {
             return [undefined, new WalletError(WalletErrorCode.INVALID_KEY_FORMAT, err.toString())];
         }
 
@@ -1837,7 +1837,7 @@ export class WalletBackend extends EventEmitter {
         try {
             fs.writeFileSync(filename, fileData);
             return true;
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Failed to write file: ' + err.toString(),
                 LogLevel.ERROR,
@@ -2865,7 +2865,7 @@ export class WalletBackend extends EventEmitter {
     private async sync(sleep: boolean): Promise<boolean> {
         try {
             return await this.processBlocks(sleep);
-        } catch (err) {
+        } catch (err: any) {
             logger.log(
                 'Error processing blocks: ' + err.toString(),
                 LogLevel.INFO,
