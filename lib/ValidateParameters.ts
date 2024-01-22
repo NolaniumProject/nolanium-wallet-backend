@@ -56,7 +56,7 @@ export function validateAddresses(
             if (parsed.paymentId.length !== 0 && !integratedAddressesAllowed) {
                 return new WalletError(WalletErrorCode.ADDRESS_IS_INTEGRATED);
             }
-        } catch (err) {
+        } catch (err: any) {
             return new WalletError(WalletErrorCode.ADDRESS_NOT_VALID, err.toString());
         }
     }
